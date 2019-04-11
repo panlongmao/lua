@@ -1,8 +1,5 @@
 
 
-
-
-
 Q:	替换一个精灵图片\
 A:
 	local firstCard = CCSPrite:create("./1.png")
@@ -163,11 +160,6 @@ A:
         lblMeScore:setString(curSign[2]..tostring(curMeScore))
     end))))
 	
-	
-	
-	
-	
-	
 Q:	实现continue 的效果
 A:
 	function  testContinue()
@@ -239,6 +231,12 @@ A:
 		return true
 	end
 	
+Q:	setSpriteFrame
+A:
+
+Q:	gitlab centos 6 按照官网装好不能访问
+A:	
+	sudo gitlab-ctl reconfigure     -- 要配置下
 	
 	
 	
