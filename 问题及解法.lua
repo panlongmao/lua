@@ -238,6 +238,27 @@ Q:	gitlab centos 6 按照官网装好不能访问
 A:	
 	sudo gitlab-ctl reconfigure     -- 要配置下
 	
+Q:	lua 中string库的使用
+A:	
+	string.match(str, pattern, init)    作用：匹配表达式           str字符串  pattern 匹配的表达式  init 匹配的起始位置   	
+	
+	string.byte(str, i, j)				作用：将字母转换成字符串   str字符串  i开始的位置  j末尾位置   
+	
+	string.char(a, b, c, d)				作用：将数字转换成字母    abcd 表示多个数字，准换成ascaii 表中对应的字母
+	
+	string.upper(argument)				作用：字符串转换成大写
+	
+	string.lower(argument)				作用：字符串转换成小写
+	
+	string.gsub(mainStr, findStr, replaceStr, num)    mainStr 字符串 findStr 需要替换的字符  replaceStr 替换的字符  num(替换的次数，可以忽略)
+	
+	string.find (str, substr, num)   str字符串  substr  str中查找的字符  num 索引 （感觉没什么用）
+	
+	string.reverse(str)    作用：反转字符串
+	
+	string.format(.....)   返回一个类似printf的格式化字符串     
+ 	 
+	
 	
 	
 	
