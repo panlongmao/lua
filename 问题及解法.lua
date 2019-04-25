@@ -257,6 +257,32 @@ A:
 	string.reverse(str)    作用：反转字符串
 	
 	string.format(.....)   返回一个类似printf的格式化字符串     
+	
+	
+Q: cocos 3.x 动画显示
+A:
+//以下是加载相关的代码：
+None *rootNode = CSLoader::createNode("MainScene.csb");//传入Studio2.x的资源路径
+this->addChild(rootNode);//假设this是即将显示的scene
+//加载动画：
+ActionTimeline *action = CSLoader::createTimeline("MainScene.csb");
+rootNode->runAction(action);//注!!!：同一个文件创建的节点只能使用同一个文件创建的动画。
+//播放动画：
+action->gotoFrameAndPlay(0,60,true);//从第0帧到60帧循环播放。还有其他重载函数，具体看源码.
+//帧事件监听
+action->setFrameEventCallFunc(CC_CALLBACK_1(myScene::onFrameEvent, this));
+
+
+Q: display.newSprite("#icon.png")
+A:
+	加上# 表示从缓存帧中读取  
+
+Q: git reflog 时光穿梭机  （git 上有6次提交，然后不小心回退到了第一次，然后再次提交了修改7，怎么使得代码7次修改都合并）
+A:
+	git reflog    --会列出你做过的所有提交  可以得到对应的hash值
+	git reset --hard     第6次的hash值     -- 这里就回滚到了第6次提交的代码了
+	git cherry-pick 第7次提交的hash值      -- 这里就把第7次提交的东西和进来了，这里会有冲突，解决下就好
+
  	 
 	
 	
