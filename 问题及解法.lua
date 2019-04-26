@@ -282,6 +282,10 @@ A:
 	git reflog    --会列出你做过的所有提交  可以得到对应的hash值
 	git reset --hard     第6次的hash值     -- 这里就回滚到了第6次提交的代码了
 	git cherry-pick 第7次提交的hash值      -- 这里就把第7次提交的东西和进来了，这里会有冲突，解决下就好
+	
+Q: table.remove(table[,pos])
+A:	
+	删除在pos位置上的元素，后面的元素会向前一栋，然后删除的index会向前移动，导致删除后的数据不是你想要的。当不填入pos时，删除table末尾的数据
 
  	 
 	
